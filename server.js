@@ -41,9 +41,11 @@ const AdminUser = mongoose.model('AdminUser', adminUserSchema);
 async function seedAdmin() {
   const adminCount = await AdminUser.countDocuments();
   if (adminCount === 0) {
-    const hash = bcrypt.hashSync('darshan@admin2026', 10);
-    await AdminUser.create({ username: 'darshan', password_hash: hash });
-    console.log('✓ Default admin created — username: darshan');
+    const adminUsername = process.env.ADMIN_USERNAME || 'darshan';
+    const adminPassword = process.env.ADMIN_PASSWORD || 'darshan@admin2026';
+    const hash = bcrypt.hashSync(adminPassword, 10);
+    await AdminUser.create({ username: adminUsername, password_hash: hash });
+    console.log(`✓ Default admin created — username: ${adminUsername}`);
   }
 }
 seedAdmin();

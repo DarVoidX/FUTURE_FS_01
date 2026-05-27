@@ -63,6 +63,8 @@ Create a `.env` file in the root directory and configure the following variables
 ```env
 MONGODB_URI=your_mongodb_atlas_connection_string
 PORT=3000
+ADMIN_USERNAME=your_custom_admin_username
+ADMIN_PASSWORD=your_custom_admin_password
 ```
 
 ### 4. Run the Development Server
