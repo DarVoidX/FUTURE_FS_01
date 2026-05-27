@@ -37,15 +37,25 @@ const adminUserSchema = new mongoose.Schema({
 const Message = mongoose.model('Message', messageSchema);
 const AdminUser = mongoose.model('AdminUser', adminUserSchema);
 
-// Seed default admin user if none exists
+// Seed or update admin user dynamically based on environment variables
 async function seedAdmin() {
-  const adminCount = await AdminUser.countDocuments();
-  if (adminCount === 0) {
+  try {
     const adminUsername = process.env.ADMIN_USERNAME || 'darshan';
     const adminPassword = process.env.ADMIN_PASSWORD || 'darshan@admin2026';
     const hash = bcrypt.hashSync(adminPassword, 10);
-    await AdminUser.create({ username: adminUsername, password_hash: hash });
-    console.log(`✓ Default admin created — username: ${adminUsername}`);
+
+    // Delete any old admin users to prevent leftover accounts
+    await AdminUser.deleteMany({ username: { $ne: adminUsername } });
+
+    // Find and update, or create the primary admin user
+    await AdminUser.findOneAndUpdate(
+      { username: adminUsername },
+      { password_hash: hash },
+      { upsert: true, new: true }
+    );
+    console.log(`✓ Admin credentials synced with environment — username: ${adminUsername}`);
+  } catch (err) {
+    console.error('Failed to sync admin credentials:', err);
   }
 }
 seedAdmin();
