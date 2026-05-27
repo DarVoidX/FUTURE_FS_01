@@ -85,13 +85,13 @@ A fully secure, real-time message dashboard is built into the portfolio. You can
 ## 📸 Screenshots
 
 ### Homepage Layout
-*(Add homepage screenshot here)*
+![Homepage Layout](home%20page.png)
 
 ### Secret Admin Dashboard
-*(Add admin dashboard screenshot here)*
+![Secret Admin Dashboard](admin%20page.png)
 
 ### Mobile Responsive View
-*(Add mobile responsive view screenshot here)*
+![Mobile Responsive View](phone%20image.jpeg)
 
 ---
 
