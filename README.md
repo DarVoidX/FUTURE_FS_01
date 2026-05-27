@@ -1,27 +1,33 @@
-# 💻 Darshan Naidu — Premium Developer Portfolio & AI Systems Hub
+# 💻 Darshan Naidu — Full Stack Portfolio with Secure Admin Dashboard
 
-A visually stunning, high-performance, ultra-modern developer portfolio styled with an elite **Dark Terminal Editorial** design language. Optimized for premium visual aesthetics, mathematical centering, and smooth CSS-driven page state transitions. Included is a secure custom Node.js/SQLite backend and a responsive secret Admin Control Panel for real-time contact message management.
+## 🌐 Live Demo
+[https://darshan-portfolio-phyt.onrender.com](https://darshan-portfolio-phyt.onrender.com)
 
----
+## 📌 Internship Project
+This project was developed as part of the **Future Interns Full Stack Web Development Internship (Task 1)**.
 
-## 🎨 Design & Aesthetic Highlights
-
-- **Thematic Integration**: Shipped in a stellar **Cyber-Cyan & Slate-Charcoal Gray** monochrome color palette (`#00f0ff` glow accents).
-- **Dot-Art Wallpaper Framing**: Custom-integrated *Creation of Adam* high-concept digital dot-art backdrop, aligned with `background-size: contain` to frame the home content flawlessly on all screens.
-- **Glassmorphic Navigation Capsule**: The primary homepage navigation links and social icons float dynamically inside delicate, curved glass capsules with a deep frosted backing blur (`backdrop-filter: blur(10px)`) to guarantee flawless legibility over background dots.
-- **Absolute Typography Alignment**: Leverages a highly condensed, bold editorial display font (`Bebas Neue`) with the terminal blinking cursor (`_`) positioned absolutely to ensure 100% perfect mathematical and visual centering of display content.
-- **Micro-Animations & Transitions**: Dynamic CSS scaling, glowing 1px active capsule borders, and smooth state-based section transitions (`body.state-home` vs `body.state-section`).
-- **Responsive Portrait Grid**: Features a vertical rectangular profile card structure (`160px` by `200px`) using standard `object-fit: cover` and styled cyan brackets to scale portrait images flawlessly.
+Clean modern UI with responsive layouts, smooth transitions, and glassmorphism-inspired styling. Included is a secure custom Node.js/MongoDB backend and a responsive secret Admin Control Panel for real-time contact message management.
 
 ---
 
-## 🛠️ Technology Stack
+## ✨ Features
 
-- **Frontend**: Vanilla HTML5, Premium CSS3, Responsive JavaScript (ES6+), FontAwesome Icons.
-- **Typography**: Google Fonts (Bebas Neue, DM Mono, DM Sans).
-- **Backend**: Node.js, Express.js.
-- **Database**: SQLite3 (lightweight, structured SQL storage for message logs).
-- **Security**: Password hashing using `bcryptjs` and session tokens powered by custom cryptographically secure tokens.
+- **Responsive Modern UI**: Flawless, pixel-perfect experience across desktop, tablet, and mobile displays.
+- **Secure Admin Control Panel**: A hidden dashboard to view, mark as read, and delete contact inquiries.
+- **MongoDB Atlas Integration**: Cloud persistent database storage ensuring contact messages are saved permanently.
+- **Robust Message Management**: Real-time admin feedback and message statistic counters.
+- **Anti-Theft Source Code Protection**: Built-in inspect-element console warnings, hidden copyright comments, and meta signatures.
+- **Elegant Typography & Styling**: Custom luxurious serif display headings and sleek frosted glass containers.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+), FontAwesome Icons
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB Atlas (M0 Free Shared Tier)
+- **Authentication**: Custom cryptographically secure session tokens, `bcryptjs` password hashing
+- **Hosting & Deployment**: Render (Web Service Free Tier)
 
 ---
 
@@ -32,7 +38,7 @@ A visually stunning, high-performance, ultra-modern developer portfolio styled w
 ├── index.html               # Main responsive portfolio homepage & sections
 ├── style.css                # Custom core CSS design system, typography & transitions
 ├── script.js                # Frontend navigation transitions & forms logic
-├── server.js                # Express Server, MongoDB API routes & authentication
+├── server.js                # Express server, MongoDB connection, API routes & admin authentication
 ├── profile.jpg              # Professional portrait photo
 ├── package.json             # Node dependencies and execution scripts
 ```
@@ -52,11 +58,18 @@ cd port
 npm install
 ```
 
-### 3. Run the Development Server
+### 3. Setup Environment Variables
+Create a `.env` file in the root directory and configure the following variables:
+```env
+MONGODB_URI=your_mongodb_atlas_connection_string
+PORT=3000
+```
+
+### 4. Run the Development Server
 ```bash
 npm start
 ```
-The server will boot up and listen on **`http://localhost:3000`** with the SQLite database (`portfolio.db`) automatically initialized!
+The server will boot up and listen on **`http://localhost:3000`** with the MongoDB database connection active.
 
 ---
 
@@ -65,44 +78,38 @@ The server will boot up and listen on **`http://localhost:3000`** with the SQLit
 A fully secure, real-time message dashboard is built into the portfolio. You can view, mark as read, and delete contact inquiries securely.
 
 - **Access URL**: **`http://localhost:3000/dn-control-panel`**
-- **Default Credentials**:
-  - **Username**: `darshan`
-  - **Password**: `darshan@admin2026`
+- **Default Credentials**: Admin credentials are securely configured and initialized in the backend code during the database setup to protect privacy.
 
-> [!WARNING]
-> Prior to hosting the portfolio publicly on GitHub or deploying to production, make sure to change the admin password.
-> You can update the password hash in `server.js` by running a secure hash generator or replacing the initialization logic on line 44.
+---
+
+## 📸 Screenshots
+
+### Homepage Layout
+*(Add homepage screenshot here)*
+
+### Secret Admin Dashboard
+*(Add admin dashboard screenshot here)*
+
+### Mobile Responsive View
+*(Add mobile responsive view screenshot here)*
 
 ---
 
 ## 🌐 Production Deployment Guide
 
-Since this application includes a dynamic Express server and SQLite database, it must be hosted on a provider that supports Node.js execution.
+This project is fully cloud-ready and deployed using free hosting tiers. 
 
-### Recommended Hosting Services
-
-1. **Render (Recommended — Free Tier)**:
-   - Create a new **Web Service** pointing to your GitHub repository.
-   - Set Build Command: `npm install`
-   - Set Start Command: `node server.js`
-   - Set the `PORT` Environment Variable to `3000` (optional).
-   - *Note: To persist SQLite messages, set up a dynamic disk volume on Render, or simply use Render's built-in PostgreSQL add-on if persistent disk storage is not preferred.*
-
-2. **Railway (Ultra-Fast Deployment)**:
-   - Create a new project and link your GitHub repo.
-   - Railway will automatically detect the `package.json` file and deploy the Express server.
-   - Under Settings, you can attach a persistent volume to preserve `portfolio.db` message backups!
-
-3. **VPS / Self-Hosting (DigitalOcean, AWS, Linode)**:
-   - Clone the repository onto your server.
-   - Run `npm install` and start the process using a process manager like **PM2**:
-     ```bash
-     pm2 start server.js --name "portfolio"
-     ```
-   - Set up an Nginx reverse proxy to forward traffic to port `3000`.
+### Deploying on Render:
+1. Create a new **Web Service** on Render and link your GitHub repository.
+2. Set **Build Command**: `npm install`
+3. Set **Start Command**: `npm start`
+4. Under **Environment Variables**, add:
+   - **Key**: `MONGODB_URI`
+   - **Value**: `your_mongodb_atlas_connection_string` (ensure you replace the password placeholder with your actual MongoDB Atlas database password).
+5. Click **Create Web Service**. Render will automatically build, deploy, and launch your live site!
 
 ---
 
 ## 📜 License
 
-Created with passion by **Darshan Naidu** © 2026. All rights reserved.
+© 2026 Darshan Naidu. All rights reserved.
