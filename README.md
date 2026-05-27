@@ -31,12 +31,10 @@ A visually stunning, high-performance, ultra-modern developer portfolio styled w
 ├── admin.html               # Secret Admin Control Panel Dashboard
 ├── index.html               # Main responsive portfolio homepage & sections
 ├── style.css                # Custom core CSS design system, typography & transitions
-├── script.js               # Frontend navigation transitions & forms logic
-├── server.js                # Express Server, SQLite API routes & authentication
-├── portfolio.db             # Local SQLite database (auto-generated)
+├── script.js                # Frontend navigation transitions & forms logic
+├── server.js                # Express Server, MongoDB API routes & authentication
 ├── profile.jpg              # Professional portrait photo
-├── code_background.png      # High-concept Creation of Adam dot-art wallpaper
-└── package.json             # Node dependencies and execution scripts
+├── package.json             # Node dependencies and execution scripts
 ```
 
 ---
