@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Darshan Naidu — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Prata&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-logo">DN<span class="accent">.</span></div>
+    <ul class="nav-links">
+      <li><button class="nav-btn active" data-target="home">Home</button></li>
+      <li><button class="nav-btn" data-target="about">About</button></li>
+      <li><button class="nav-btn" data-target="education">Education</button></li>
+      <li><button class="nav-btn" data-target="experience">Experience</button></li>
+      <li><button class="nav-btn" data-target="skills">Skills</button></li>
+      <li><button class="nav-btn" data-target="projects">Projects</button></li>
+      <li><button class="nav-btn" data-target="coding-profiles">Profiles</button></li>
+      <li><button class="nav-btn" data-target="contact">Contact</button></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="content-wrapper">
+
+    <!-- ═══════════════ HOME ═══════════════ -->
+    <section id="home" class="section active">
+      <div class="home-splash">
+        <h1 class="hero-name">Darshan Naidu</h1>
+        <p class="hero-subtitle">Web Developer <span class="accent">|</span> Programmer <span class="accent">|</span> AI Builder</p>
+        
+        <ul class="splash-links">
+          <li><button class="nav-btn active" data-target="home">Home</button></li>
+          <li><button class="nav-btn" data-target="about">About</button></li>
+          <li><button class="nav-btn" data-target="education">Education</button></li>
+          <li><button class="nav-btn" data-target="experience">Experience</button></li>
+          <li><button class="nav-btn" data-target="skills">Skills</button></li>
+          <li><button class="nav-btn" data-target="projects">Projects</button></li>
+          <li><button class="nav-btn" data-target="coding-profiles">Profiles</button></li>
+          <li><button class="nav-btn" data-target="contact">Contact</button></li>
+        </ul>
+
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/darshan-naidu-49603632a/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/DarVoidX" target="_blank" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/dar.shanckm/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-index">01</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-identity">
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <img src="profile.jpg" alt="Darshan Naidu" class="profile-img" />
+            </div>
+          </div>
+          <div class="about-meta-list">
+            <div class="meta-item"><span class="meta-label">Name</span><span>Darshan Naidu</span></div>
+            <div class="meta-item"><span class="meta-label">Age</span><span>21</span></div>
+            <div class="meta-item"><span class="meta-label">Location</span><span>Chikkamagaluru, India</span></div>
+            <div class="meta-item"><span class="meta-label">Email</span><span>darshannaidu696@gmail.com</span></div>
+            <div class="meta-item"><span class="meta-label">Phone</span><span>+91-7892611628</span></div>
+          </div>
+          <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <a href="DarshanNaidu_Resume.pdf" class="btn-primary" download><i class="fas fa-download"></i> Download Resume</a>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="about-tagline">Computer Science <span class="accent">Undergraduate</span> &amp; AI Systems Builder</p>
+          <p class="about-bio">
+            I'm a Computer Science undergraduate with hands-on experience designing AI-driven systems and full-stack web applications. I've built end-to-end deep learning pipelines for medical AI and media integrity using CNN, BiLSTM, and ResNeXt50 architectures.
+          </p>
+          <p class="about-bio">
+            Proficient in Python, JavaScript, and SQL — I work across the full stack, from responsive frontends to model integration. I'm disciplined about version control, practiced in AI-assisted development workflows, and focused on shipping clean, functional products under deadlines.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <i class="fas fa-brain accent"></i>
+              <span>Deep Learning</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-code accent"></i>
+              <span>Full Stack Dev</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-trophy accent"></i>
+              <span>Hackathon Competitor</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-certificate accent"></i>
+              <span>8+ Certifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ EDUCATION ═══════════════ -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <span class="section-index">02</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="timeline-container">
+
+        <div class="timeline-item" data-delay="0">
+          <div class="tl-marker"><span>B.E</span></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <h3 class="tl-institution">Adichunchanagiri Institute of Technology</h3>
+                <p class="tl-degree">B.E. in Computer Science and Engineering</p>
+              </div>
+              <span class="tl-badge">Current</span>
+            </div>
+            <div class="tl-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Oct 2023 – Present</span>
+              <span><i class="fas fa-map-marker-alt"></i> Chikkamagaluru, India</span>
+              <span class="tl-cgpa"><i class="fas fa-star"></i> CGPA: 8.01 / 10.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-delay="1">
+          <div class="tl-marker"><span>XII</span></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <h3 class="tl-institution">Government Pre-University College</h3>
+                <p class="tl-degree">Class XII — Science Stream</p>
+              </div>
+            </div>
+            <div class="tl-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Jun 2022 – Mar 2023</span>
+              <span><i class="fas fa-map-marker-alt"></i> Chikkamagaluru, India</span>
+              <span class="tl-cgpa"><i class="fas fa-star"></i> 80.83%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-delay="2">
+          <div class="tl-marker"><span>X</span></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <h3 class="tl-institution">J.V.S School</h3>
+                <p class="tl-degree">Class X — Secondary Education</p>
+              </div>
+            </div>
+            <div class="tl-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Jan 2020 – Jun 2020</span>
+              <span><i class="fas fa-map-marker-alt"></i> Chikkamagaluru, India</span>
+              <span class="tl-cgpa"><i class="fas fa-star"></i> 76.32%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications sub-section -->
+      <div class="cert-section">
+        <h3 class="cert-heading"><span class="accent">//</span> Certifications</h3>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="18" r="3.5" fill="#86bc25"/>
+                <path d="M4 6h6c3.3 0 6 2.7 6 6s-2.7 6-6 6H4V6zm4 8.5h2c1.4 0 2.5-1.1 2.5-2.5S11.4 9.5 10 9.5H8v5z" fill="#ffffff"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">Cyber Job Simulation</p>
+              <p class="cert-issuer">Deloitte — May 2026</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="10.5" height="10.5" fill="#f25022"/>
+                <rect x="11.5" y="0" width="10.5" height="10.5" fill="#7fba00"/>
+                <rect x="0" y="11.5" width="10.5" height="10.5" fill="#00a4ef"/>
+                <rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">AI Skills Challenge</p>
+              <p class="cert-issuer">Microsoft — Aug 2023</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#E0B8A5">
+                <path d="M16.5 19.5h-3.4l-1.1-3.6H6.3l-1.1 3.6H1.9L7.2 4.5h3.9l5.4 15zm-5.6-6.8L9.1 6.8l-1.8 5.9h3.6z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">Claude Code in Action</p>
+              <p class="cert-issuer">Anthropic — Mar 2026</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#76b900">
+                <path d="M23.1 11.5c0-5.8-4.4-10.6-10-11c-0.3 0-0.6 0.2-0.6 0.5v1.6c0 0.3 0.2 0.5 0.5 0.6c4.6 0.4 8.1 4.2 8.1 8.8c0 4.9-4 8.9-8.9 8.9c-4.4 0-8.1-3.2-8.8-7.5c0-0.1 0-0.2 0.1-0.3l1.3-1.3c0.2-0.2 0.2-0.5 0-0.7c-0.2-0.2-0.5-0.2-0.7 0L2.7 12c-0.2 0.2-0.2 0.5 0 0.7l1.3 1.3c0.2 0.2 0.5 0.2 0.7 0c0.1-0.1 0.1-0.2 0.1-0.3c0.4 3.3 3.2 5.8 6.5 5.8C17.4 19.5 23.1 15.9 23.1 11.5z"/>
+                <path d="M12 4.5c-3.9 0-7.1 3.2-7.1 7.1c0 1.9 0.8 3.7 2.1 5c0.2 0.2 0.5 0.2 0.7 0l1.1-1.1c0.2-0.2 0.2-0.5 0-0.7C7.9 13.9 7.5 13 7.5 12c0-2.5 2-4.5 4.5-4.5c2 0 3.7 1.3 4.3 3.1c0.1 0.3 0.4 0.4 0.7 0.3l1.5-0.5c0.3-0.1 0.4-0.4 0.3-0.7C17.8 6.7 15.1 4.5 12 4.5z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">AI on Jetson Nano</p>
+              <p class="cert-issuer">NVIDIA — May 2026</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#00f0ff">
+                <path d="M12 2L2 7l10 5l10-5L12 2z"/>
+                <path d="M17 11.5v3.8c0 1.5-2.2 2.7-5 2.7s-5-1.2-5-2.7v-3.8l5 2.5L17 11.5z"/>
+                <path d="M12 13.5L2 8.5v6.8c0 1.5 4.5 2.7 10 2.7s10-1.2 10-2.7V8.5L12 13.5z" opacity="0.4"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">Data Structures &amp; Algorithms</p>
+              <p class="cert-issuer">NPTEL, IIT Kanpur — Jul–Oct 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#00f0ff">
+                <path d="M12 2L2 7l10 5l10-5L12 2z"/>
+                <path d="M17 11.5v3.8c0 1.5-2.2 2.7-5 2.7s-5-1.2-5-2.7v-3.8l5 2.5L17 11.5z"/>
+                <path d="M12 13.5L2 8.5v6.8c0 1.5 4.5 2.7 10 2.7s10-1.2 10-2.7V8.5L12 13.5z" opacity="0.4"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">Database Management Systems</p>
+              <p class="cert-issuer">NPTEL, IIT Kharagpur — Jul–Sep 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#00f0ff">
+                <path d="M12 2L2 7l10 5l10-5L12 2z"/>
+                <path d="M17 11.5v3.8c0 1.5-2.2 2.7-5 2.7s-5-1.2-5-2.7v-3.8l5 2.5L17 11.5z"/>
+                <path d="M12 13.5L2 8.5v6.8c0 1.5 4.5 2.7 10 2.7s10-1.2 10-2.7V8.5L12 13.5z" opacity="0.4"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">Computer Networks &amp; IP</p>
+              <p class="cert-issuer">NPTEL, IIT Kharagpur — Jan–Apr 2026</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#13aa52">
+                <path d="M12 1.5C11.5 1.5 6 6.5 6 12.5c0 4.2 2.5 7.3 5.5 8.2v1.8c0 .3.2.5.5.5s.5-0.2.5-0.5v-1.8c3-0.9 5.5-4 5.5-8.2C18 6.5 12.5 1.5 12 1.5z M12 19c-2.2-0.8-4-3.2-4-6.5c0-3.3 2.5-6.5 4-7.5c1.5 1 4 4.2 4 7.5C16 15.8 14.2 18.2 12 19z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="cert-name">MongoDB Basics</p>
+              <p class="cert-issuer">MongoDB — Apr 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <span class="section-index">03</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="exp-container">
+        <div class="exp-card">
+          <div class="exp-card-header">
+            <div class="exp-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="exp-title-group">
+              <h3 class="exp-role">Full Stack Web Development Intern</h3>
+              <p class="exp-company">Future Interns</p>
+            </div>
+            <span class="exp-badge current">Current</span>
+          </div>
+          <div class="exp-date"><i class="fas fa-clock"></i> May 2026 – Present</div>
+          <ul class="exp-bullets">
+            <li>Engineered responsive, cross-device web applications using HTML, CSS, and JavaScript, prioritising clean UI architecture and consistent user experience across screen sizes.</li>
+            <li>Delivered portfolio websites and a CRM-based project end-to-end, maintaining structured GitHub repositories with disciplined branching conventions and commit hygiene.</li>
+            <li>Identified and resolved frontend issues across concurrent projects, applying systematic debugging to accelerate feature iteration and reduce rework.</li>
+          </ul>
+          <div class="exp-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span><span>CRM</span>
+          </div>
+        </div>
+
+        <!-- Achievements card -->
+        <div class="exp-card achievements-card">
+          <div class="exp-card-header">
+            <div class="exp-icon accent-bg"><i class="fas fa-trophy"></i></div>
+            <div class="exp-title-group">
+              <h3 class="exp-role">Achievements</h3>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-tag">HACKATHON</span>
+            <p><strong>HACKABHIGNA 2025</strong> — 24-hour national-level hackathon. Collaborated under time pressure to design and demo a fully functional technical solution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SKILLS ═══════════════ -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-index">04</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+
+      <div class="skills-wrapper">
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><span class="accent">—</span> Languages</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-python" style="color: #3776ab;"></i></div><span>Python</span></div>
+            <div class="skill-card">
+              <div class="skill-icon" style="padding: 3px;">
+                <svg viewBox="0 0 24 24" fill="#00599C" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                  <path d="M22.9,11.1H19v-3.9h-1.8v3.9h-3.9v1.8h3.9v3.9H19v-3.9h3.9V11.1z M14.1,2.8L11.9,0.6L2.3,10.2L0.1,12.4l2.2,2.2l9.6,9.6l2.2-2.2l-9.6-9.6L14.1,2.8z"/>
+                </svg>
+              </div>
+              <span>C / C++</span>
+            </div>
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-js-square" style="color: #f7df1e;"></i></div><span>JavaScript</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-database" style="color: #00758f;"></i></div><span>SQL</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><span class="accent">—</span> Web Development</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-html5" style="color: #e34f26;"></i></div><span>HTML5</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-css3-alt" style="color: #1572b6;"></i></div><span>CSS3</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-mobile-screen" style="color: #00f0ff;"></i></div><span>Responsive Design</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-python" style="color: #107254;"></i></div><span>Django</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-plug" style="color: #ffb900;"></i></div><span>REST API Basics</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><span class="accent">—</span> Databases</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon" style="padding: 4px;">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#13aa52" style="width:100%;height:100%;">
+                  <path d="M12 1.5C11.5 1.5 6 6.5 6 12.5c0 4.2 2.5 7.3 5.5 8.2v1.8c0 .3.2.5.5.5s.5-0.2.5-0.5v-1.8c3-0.9 5.5-4 5.5-8.2C18 6.5 12.5 1.5 12 1.5z M12 19c-2.2-0.8-4-3.2-4-6.5c0-3.3 2.5-6.5 4-7.5c1.5 1 4 4.2 4 7.5C16 15.8 14.2 18.2 12 19z"/>
+                </svg>
+              </div>
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-table" style="color: #00c853;"></i></div><span>SQL Querying</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-server" style="color: #8a95a5;"></i></div><span>DB Connectivity</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><span class="accent">—</span> AI / Machine Learning</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-brain" style="color: #ff5078;"></i></div><span>CNN</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-arrows-spin" style="color: #00eb7b;"></i></div><span>BiLSTM</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-network-wired" style="color: #ffb900;"></i></div><span>ResNeXt50</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-wave-square" style="color: #00f0ff;"></i></div><span>Signal Processing</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-images" style="color: #a855f7;"></i></div><span>Image Classification</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-robot" style="color: #f43f5e;"></i></div><span>Ollama (Local LLM)</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><span class="accent">—</span> Tools &amp; Platforms</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-github" style="color: #ffffff;"></i></div><span>GitHub</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-git-alt" style="color: #f1502f;"></i></div><span>Git</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fas fa-code" style="color: #007acc;"></i></div><span>VS Code</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-linux" style="color: #fcc624;"></i></div><span>Linux</span></div>
+            <div class="skill-card"><div class="skill-icon"><i class="fab fa-windows" style="color: #0078d6;"></i></div><span>Windows</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PROJECTS ═══════════════ -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-index">05</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="project-category-label"><i class="fas fa-flask accent"></i> Engineering Projects</div>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-card-inner">
+            <div class="project-left">
+              <div class="project-num">01</div>
+              <div class="project-tag-row">
+                <span class="project-tag ai">AI / Medical</span>
+              </div>
+              <h3 class="project-title">ECG-Based Heart Disease Detection System</h3>
+            </div>
+            <div class="project-right">
+              <p class="project-desc">An AI-powered cardiac analysis system combining CNN and BiLSTM architectures to classify heart conditions from raw ECG signal data. Applied multi-stage signal preprocessing to improve model robustness, producing a prediction pipeline suitable for clinical screening.</p>
+              <div class="project-tech">
+                <span>Python</span><span>CNN</span><span>BiLSTM</span><span>Signal Processing</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/DarVoidX/ECG-Diagnostic-System" target="_blank" class="proj-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-card-inner">
+            <div class="project-left">
+              <div class="project-num">02</div>
+              <div class="project-tag-row">
+                <span class="project-tag security">Security / CV</span>
+              </div>
+              <h3 class="project-title">Deepfake Detection System</h3>
+            </div>
+            <div class="project-right">
+              <p class="project-desc">A deepfake detection pipeline leveraging ResNeXt50 and LSTM models to identify manipulation in images and video at scale. Implemented structured preprocessing and deep learning classification to distinguish authentic from synthetically altered content.</p>
+              <div class="project-tech">
+                <span>Python</span><span>ResNeXt50</span><span>LSTM</span><span>Image Classification</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/DarVoidX/deepfake-detection-system" target="_blank" class="proj-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="project-category-label" style="margin-top:3rem;"><i class="fas fa-wrench accent"></i> Learning &amp; Internship Projects</div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-left">
+              <div class="project-num">03</div>
+              <div class="project-tag-row">
+                <span class="project-tag web">Web Dev</span>
+              </div>
+              <h3 class="project-title">Portfolio Websites</h3>
+            </div>
+            <div class="project-right">
+              <p class="project-desc">Responsive multi-page portfolio websites delivered end-to-end during the Future Interns internship, with clean UI architecture and disciplined GitHub version control.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/DarVoidX" target="_blank" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-left">
+              <div class="project-num">04</div>
+              <div class="project-tag-row">
+                <span class="project-tag web">Web Dev</span>
+              </div>
+              <h3 class="project-title">CRM-Based Application</h3>
+            </div>
+            <div class="project-right">
+              <p class="project-desc">A customer relationship management project delivered as part of the internship, demonstrating full-stack problem solving, feature iteration, and systematic debugging across a structured codebase.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/DarVoidX" target="_blank" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ CODING PROFILES ═══════════════ -->
+    <section id="coding-profiles" class="section">
+      <div class="section-header">
+        <span class="section-index">06</span>
+        <h2 class="section-title">Coding Profiles</h2>
+      </div>
+      <div class="profiles-grid">
+
+        <a href="https://github.com/DarVoidX" target="_blank" class="profile-card">
+          <div class="profile-icon github"><i class="fab fa-github"></i></div>
+          <div class="profile-info">
+            <h3>GitHub</h3>
+            <p>DarVoidX</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://leetcode.com/u/darshan__naidu/" target="_blank" class="profile-card">
+          <div class="profile-icon leetcode"><i class="fas fa-code"></i></div>
+          <div class="profile-info">
+            <h3>LeetCode</h3>
+            <p>darshan__naidu</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.codechef.com/users/trip_summit_53" target="_blank" class="profile-card">
+          <div class="profile-icon codechef"><i class="fas fa-utensils"></i></div>
+          <div class="profile-info">
+            <h3>CodeChef</h3>
+            <p>trip_summit_53</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.hackerrank.com/" target="_blank" class="profile-card">
+          <div class="profile-icon hackerrank"><i class="fab fa-hackerrank"></i></div>
+          <div class="profile-info">
+            <h3>HackerRank</h3>
+            <p>Problem Solving</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.geeksforgeeks.org/profile/darshannkrl9?tab=overview" target="_blank" class="profile-card">
+          <div class="profile-icon gfg"><i class="fas fa-laptop-code"></i></div>
+          <div class="profile-info">
+            <h3>GeeksforGeeks</h3>
+            <p>darshannkrl9</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.naukri.com/code360/profile/f1750660-bb2a-489f-afcf-9c1bb9a22f73" target="_blank" class="profile-card">
+          <div class="profile-icon codeninja"><i class="fas fa-fire"></i></div>
+          <div class="profile-info">
+            <h3>Code Ninja</h3>
+            <p>Code360</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.hackerearth.com/@darshannaidu696/" target="_blank" class="profile-card">
+          <div class="profile-icon hackerearth"><i class="fas fa-globe"></i></div>
+          <div class="profile-info">
+            <h3>HackerEarth</h3>
+            <p>darshannaidu696</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-index">07</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p class="contact-tagline">Got a project, opportunity, or just want to connect?<br><span class="accent">Let's talk.</span></p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <p class="contact-item-label">Email</p>
+                <a href="mailto:darshannaidu696@gmail.com">darshannaidu696@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <p class="contact-item-label">Phone</p>
+                <a href="tel:+917892611628">+91-7892611628</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <p class="contact-item-label">Location</p>
+                <span>Chikkamagaluru, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/darshan-naidu-49603632a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/DarVoidX" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/dar.shanckm/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="cf-name">Your Name</label>
+              <input type="text" id="cf-name" placeholder="John Doe" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" placeholder="john@example.com" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" placeholder="Project Collaboration" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+              <label for="cf-msg">Message</label>
+              <textarea id="cf-msg" rows="5" placeholder="Tell me about your project or idea..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <p class="form-note" id="form-note"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

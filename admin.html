@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin — Control Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:          #050507;
+      --bg2:         #0b0c10;
+      --bg3:         #14151e;
+      --accent:      #00f0ff;
+      --accent-dim:  #00b8cc;
+      --accent-glow: rgba(0,240,255,0.15);
+      --accent-glow-strong: rgba(0,240,255,0.32);
+      --text:        #f0f3f5;
+      --text-muted:  #8a95a5;
+      --text-dim:    #4e5866;
+      --border:      rgba(0,240,255,0.14);
+      --border-soft: rgba(255,255,255,0.06);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+      --font-body:    'DM Sans', sans-serif;
+      --radius:       12px;
+      --transition:   0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --danger:       #ff5078;
+      --danger-glow:  rgba(255,80,120,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ─── LOGIN PANEL ─── */
+    #login-panel {
+      width: 100%;
+      max-width: 420px;
+      padding: 2.5rem;
+      background: var(--bg2);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    #login-panel.hidden { display: none; }
+
+    .login-logo {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .login-logo .accent { color: var(--accent); }
+    .login-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .login-form { display: flex; flex-direction: column; gap: 1rem; }
+    .login-input {
+      background: var(--bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .login-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .login-input::placeholder { color: var(--text-dim); }
+
+    .login-btn {
+      background: var(--accent);
+      color: var(--bg);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .login-btn:hover {
+      background: var(--accent-dim);
+      box-shadow: 0 0 24px var(--accent-glow-strong);
+      transform: translateY(-2px);
+    }
+
+    .login-error {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--danger);
+      min-height: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ─── DASHBOARD ─── */
+    #dashboard {
+      display: none;
+      width: 100%;
+      max-width: 1000px;
+      padding: 2rem;
+    }
+    #dashboard.visible { display: block; }
+
+    .dash-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .dash-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.04em;
+    }
+    .dash-title .accent { color: var(--accent); }
+    .dash-stats {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .dash-stat {
+      text-align: center;
+    }
+    .dash-stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .dash-stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .logout-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+    }
+    .logout-btn:hover {
+      color: var(--danger);
+      border-color: var(--danger);
+    }
+
+    /* Messages list */
+    .msg-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .msg-card {
+      background: var(--bg2);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color var(--transition);
+      position: relative;
+    }
+    .msg-card:hover {
+      border-color: var(--border);
+    }
+    .msg-card.unread {
+      border-left: 3px solid var(--accent);
+    }
+    .msg-card.unread::after {
+      content: 'NEW';
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+    }
+
+    .msg-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      align-items: center;
+    }
+    .msg-from {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .msg-email {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+    }
+    .msg-date {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      margin-left: auto;
+    }
+    .msg-subject {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    .msg-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    .msg-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .msg-action-btn {
+      background: none;
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .msg-action-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .msg-action-btn.delete:hover {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-dim);
+    }
+    .empty-state i {
+      font-size: 3rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+    .empty-state p {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      #dashboard { padding: 1rem; }
+      .dash-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .msg-meta { flex-direction: column; gap: 0.3rem; }
+      .msg-date { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN PANEL -->
+  <div id="login-panel">
+    <div class="login-logo">DN<span class="accent">.</span> Admin</div>
+    <p class="login-sub">Control Panel</p>
+    <form class="login-form" id="login-form">
+      <input type="text" class="login-input" id="admin-user" placeholder="Username" autocomplete="off" />
+      <input type="password" class="login-input" id="admin-pass" placeholder="Password" />
+      <button type="submit" class="login-btn"><i class="fas fa-lock"></i>&nbsp; Login</button>
+      <p class="login-error" id="login-error"></p>
+    </form>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard">
+    <div class="dash-header">
+      <div>
+        <h1 class="dash-title">Messages<span class="accent">.</span></h1>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat">
+          <div class="dash-stat-num" id="total-count">0</div>
+          <div class="dash-stat-label">Total</div>
+        </div>
+        <div class="dash-stat">
+          <div class="dash-stat-num" id="unread-count">0</div>
+          <div class="dash-stat-label">Unread</div>
+        </div>
+        <button class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+    <div class="msg-list" id="msg-list">
+      <!-- Messages inserted dynamically -->
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      const loginPanel = document.getElementById('login-panel');
+      const dashboard  = document.getElementById('dashboard');
+      const loginForm  = document.getElementById('login-form');
+      const loginError = document.getElementById('login-error');
+      const logoutBtn  = document.getElementById('logout-btn');
+      const msgList    = document.getElementById('msg-list');
+      const totalCount = document.getElementById('total-count');
+      const unreadCount = document.getElementById('unread-count');
+
+      let authToken = sessionStorage.getItem('admin_token');
+
+      // Check if already logged in
+      if (authToken) {
+        showDashboard();
+      }
+
+      // ─── LOGIN ───
+      loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        loginError.textContent = '';
+
+        const username = document.getElementById('admin-user').value.trim();
+        const password = document.getElementById('admin-pass').value;
+
+        try {
+          const res = await fetch('/api/admin/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+          });
+
+          const data = await res.json();
+
+          if (data.success) {
+            authToken = data.token;
+            sessionStorage.setItem('admin_token', authToken);
+            showDashboard();
+          } else {
+            loginError.textContent = '⚠ ' + (data.error || 'Login failed.');
+          }
+        } catch (err) {
+          loginError.textContent = '⚠ Server error. Is the server running?';
+        }
+      });
+
+      // ─── LOGOUT ───
+      logoutBtn.addEventListener('click', () => {
+        authToken = null;
+        sessionStorage.removeItem('admin_token');
+        dashboard.classList.remove('visible');
+        loginPanel.classList.remove('hidden');
+        document.getElementById('admin-user').value = '';
+        document.getElementById('admin-pass').value = '';
+      });
+
+      // ─── SHOW DASHBOARD ───
+      function showDashboard() {
+        loginPanel.classList.add('hidden');
+        dashboard.classList.add('visible');
+        loadMessages();
+      }
+
+      // ─── LOAD MESSAGES ───
+      async function loadMessages() {
+        try {
+          const res = await fetch('/api/admin/messages', {
+            headers: { 'Authorization': `Bearer ${authToken}` }
+          });
+
+          if (res.status === 401) {
+            authToken = null;
+            sessionStorage.removeItem('admin_token');
+            dashboard.classList.remove('visible');
+            loginPanel.classList.remove('hidden');
+            loginError.textContent = '⚠ Session expired. Please login again.';
+            return;
+          }
+
+          const data = await res.json();
+          renderMessages(data.messages || []);
+        } catch (err) {
+          msgList.innerHTML = '<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><p>Failed to load messages.</p></div>';
+        }
+      }
+
+      // ─── RENDER MESSAGES ───
+      function renderMessages(messages) {
+        totalCount.textContent = messages.length;
+        unreadCount.textContent = messages.filter(m => !m.is_read).length;
+
+        if (messages.length === 0) {
+          msgList.innerHTML = '<div class="empty-state"><i class="fas fa-inbox"></i><p>No messages yet.</p></div>';
+          return;
+        }
+
+        msgList.innerHTML = messages.map(msg => `
+          <div class="msg-card ${msg.is_read ? '' : 'unread'}" data-id="${msg.id}">
+            <div class="msg-meta">
+              <span class="msg-from">${escapeHtml(msg.name)}</span>
+              <span class="msg-email">${escapeHtml(msg.email)}</span>
+              <span class="msg-date">${formatDate(msg.created_at)}</span>
+            </div>
+            ${msg.subject ? `<div class="msg-subject">RE: ${escapeHtml(msg.subject)}</div>` : ''}
+            <div class="msg-body">${escapeHtml(msg.message)}</div>
+            <div class="msg-actions">
+              ${!msg.is_read ? `<button class="msg-action-btn mark-read" onclick="markRead(${msg.id})"><i class="fas fa-check"></i> Mark Read</button>` : ''}
+              <button class="msg-action-btn delete" onclick="deleteMsg(${msg.id})"><i class="fas fa-trash-alt"></i> Delete</button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // ─── MARK AS READ ───
+      window.markRead = async function(id) {
+        try {
+          await fetch(`/api/admin/messages/${id}/read`, {
+            method: 'PATCH',
+            headers: { 'Authorization': `Bearer ${authToken}` }
+          });
+          loadMessages();
+        } catch (err) {
+          console.error('Failed to mark read:', err);
+        }
+      };
+
+      // ─── DELETE MESSAGE ───
+      window.deleteMsg = async function(id) {
+        if (!confirm('Delete this message permanently?')) return;
+        try {
+          await fetch(`/api/admin/messages/${id}`, {
+            method: 'DELETE',
+            headers: { 'Authorization': `Bearer ${authToken}` }
+          });
+          loadMessages();
+        } catch (err) {
+          console.error('Failed to delete:', err);
+        }
+      };
+
+      // ─── HELPERS ───
+      function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      function formatDate(dateStr) {
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('en-IN', {
+          day: 'numeric', month: 'short', year: 'numeric',
+          hour: '2-digit', minute: '2-digit'
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
