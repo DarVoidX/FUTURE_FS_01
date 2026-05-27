@@ -5,6 +5,15 @@
 (function () {
   'use strict';
 
+  /* ─── COPYRIGHT WARNING ─── */
+  console.log(
+    "%cSTOP!%c\n\nThis website and its underlying source code are the exclusive property of %cDarshan Naidu%c.\nUnauthorized copying, cloning, or redistribution of this portfolio is strictly prohibited and will be treated as intellectual property theft.\n\nIf you want to hire me, reach out via the contact form!",
+    "color: #ff0000; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 0 #000;",
+    "color: #ffffff; font-size: 16px; line-height: 1.5;",
+    "color: #00f0ff; font-size: 18px; font-weight: bold;",
+    "color: #ffffff; font-size: 16px; line-height: 1.5;"
+  );
+
   /* ─── NAV SECTION SWITCHING ─── */
   const navBtns    = document.querySelectorAll('.nav-btn');
   const sections   = document.querySelectorAll('.section');

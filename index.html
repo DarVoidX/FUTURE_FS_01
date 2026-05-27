@@ -1,8 +1,17 @@
+<!-- 
+  ==============================================================
+  PROPERTY OF DARSHAN NAIDU 
+  DO NOT COPY, CLONE, OR REDISTRIBUTE THIS PORTFOLIO SOURCE CODE.
+  ============================================================== 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Darshan Naidu" />
+  <meta name="copyright" content="Darshan Naidu" />
+  <meta name="robots" content="index, follow" />
   <title>Darshan Naidu — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,9 +91,6 @@
             <div class="meta-item"><span class="meta-label">Email</span><span>darshannaidu696@gmail.com</span></div>
             <div class="meta-item"><span class="meta-label">Phone</span><span>+91-7892611628</span></div>
           </div>
-          <div style="display: flex; justify-content: center; margin-top: 1rem;">
-            <a href="DarshanNaidu_Resume.pdf" class="btn-primary" download><i class="fas fa-download"></i> Download Resume</a>
-          </div>
         </div>
         <div class="about-content">
           <p class="about-tagline">Computer Science <span class="accent">Undergraduate</span> &amp; AI Systems Builder</p>
@@ -112,6 +118,13 @@
               <span>8+ Certifications</span>
             </div>
           </div>
+          <div class="resume-glass-container">
+            <div class="resume-glass-text">
+              <h4>Professional Dossier</h4>
+              <p>Get a detailed overview of my experience, skills, and academic background.</p>
+            </div>
+            <a href="DarshanNaidu_Resume.pdf" class="btn-primary" download><i class="fas fa-download"></i> Download</a>
+          </div>
         </div>
       </div>
     </section>
@@ -122,56 +135,50 @@
         <span class="section-index">02</span>
         <h2 class="section-title">Education</h2>
       </div>
-      <div class="timeline-container">
-
-        <div class="timeline-item" data-delay="0">
-          <div class="tl-marker"><span>B.E</span></div>
-          <div class="tl-card">
-            <div class="tl-card-top">
-              <div>
-                <h3 class="tl-institution">Adichunchanagiri Institute of Technology</h3>
-                <p class="tl-degree">B.E. in Computer Science and Engineering</p>
-              </div>
-              <span class="tl-badge">Current</span>
-            </div>
-            <div class="tl-card-meta">
-              <span><i class="fas fa-calendar-alt"></i> Oct 2023 – Present</span>
+      <div class="edu-grid">
+        
+        <div class="edu-card">
+          <div class="edu-left">
+            <div class="edu-year">2023 <span class="accent">—</span> Present</div>
+            <div class="edu-level">B.E</div>
+          </div>
+          <div class="edu-right">
+            <span class="edu-badge">Current</span>
+            <h3 class="edu-institution">Adichunchanagiri Institute of Technology</h3>
+            <p class="edu-degree">B.E. in Computer Science and Engineering</p>
+            <div class="edu-meta">
               <span><i class="fas fa-map-marker-alt"></i> Chikkamagaluru, India</span>
-              <span class="tl-cgpa"><i class="fas fa-star"></i> CGPA: 8.01 / 10.0</span>
+              <span class="edu-cgpa"><i class="fas fa-graduation-cap"></i> CGPA: 8.01 / 10.0</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item" data-delay="1">
-          <div class="tl-marker"><span>XII</span></div>
-          <div class="tl-card">
-            <div class="tl-card-top">
-              <div>
-                <h3 class="tl-institution">Government Pre-University College</h3>
-                <p class="tl-degree">Class XII — Science Stream</p>
-              </div>
-            </div>
-            <div class="tl-card-meta">
-              <span><i class="fas fa-calendar-alt"></i> Jun 2022 – Mar 2023</span>
+        <div class="edu-card">
+          <div class="edu-left">
+            <div class="edu-year">2022 <span class="accent">—</span> 2023</div>
+            <div class="edu-level">Class XII</div>
+          </div>
+          <div class="edu-right">
+            <h3 class="edu-institution">Government Pre-University College</h3>
+            <p class="edu-degree">Class XII — Science Stream</p>
+            <div class="edu-meta">
               <span><i class="fas fa-map-marker-alt"></i> Chikkamagaluru, India</span>
-              <span class="tl-cgpa"><i class="fas fa-star"></i> 80.83%</span>
+              <span class="edu-cgpa"><i class="fas fa-graduation-cap"></i> 80.83%</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item" data-delay="2">
-          <div class="tl-marker"><span>X</span></div>
-          <div class="tl-card">
-            <div class="tl-card-top">
-              <div>
-                <h3 class="tl-institution">J.V.S School</h3>
-                <p class="tl-degree">Class X — Secondary Education</p>
-              </div>
-            </div>
-            <div class="tl-card-meta">
-              <span><i class="fas fa-calendar-alt"></i> Jan 2020 – Jun 2020</span>
+        <div class="edu-card">
+          <div class="edu-left">
+            <div class="edu-year">2019 <span class="accent">—</span> 2020</div>
+            <div class="edu-level">Class X</div>
+          </div>
+          <div class="edu-right">
+            <h3 class="edu-institution">J.V.S School</h3>
+            <p class="edu-degree">Secondary Education</p>
+            <div class="edu-meta">
               <span><i class="fas fa-map-marker-alt"></i> Chikkamagaluru, India</span>
-              <span class="tl-cgpa"><i class="fas fa-star"></i> 76.32%</span>
+              <span class="edu-cgpa"><i class="fas fa-graduation-cap"></i> 76.32%</span>
             </div>
           </div>
         </div>
@@ -197,11 +204,11 @@
 
           <div class="cert-card">
             <div class="cert-logo">
-              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="10.5" height="10.5" fill="#f25022"/>
-                <rect x="11.5" y="0" width="10.5" height="10.5" fill="#7fba00"/>
-                <rect x="0" y="11.5" width="10.5" height="10.5" fill="#00a4ef"/>
-                <rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900"/>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="9" height="9" fill="#f25022"/>
+                <rect x="13" y="2" width="9" height="9" fill="#7fba00"/>
+                <rect x="2" y="13" width="9" height="9" fill="#00a4ef"/>
+                <rect x="13" y="13" width="9" height="9" fill="#ffb900"/>
               </svg>
             </div>
             <div>
@@ -224,9 +231,10 @@
 
           <div class="cert-card">
             <div class="cert-logo">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#76b900">
-                <path d="M23.1 11.5c0-5.8-4.4-10.6-10-11c-0.3 0-0.6 0.2-0.6 0.5v1.6c0 0.3 0.2 0.5 0.5 0.6c4.6 0.4 8.1 4.2 8.1 8.8c0 4.9-4 8.9-8.9 8.9c-4.4 0-8.1-3.2-8.8-7.5c0-0.1 0-0.2 0.1-0.3l1.3-1.3c0.2-0.2 0.2-0.5 0-0.7c-0.2-0.2-0.5-0.2-0.7 0L2.7 12c-0.2 0.2-0.2 0.5 0 0.7l1.3 1.3c0.2 0.2 0.5 0.2 0.7 0c0.1-0.1 0.1-0.2 0.1-0.3c0.4 3.3 3.2 5.8 6.5 5.8C17.4 19.5 23.1 15.9 23.1 11.5z"/>
-                <path d="M12 4.5c-3.9 0-7.1 3.2-7.1 7.1c0 1.9 0.8 3.7 2.1 5c0.2 0.2 0.5 0.2 0.7 0l1.1-1.1c0.2-0.2 0.2-0.5 0-0.7C7.9 13.9 7.5 13 7.5 12c0-2.5 2-4.5 4.5-4.5c2 0 3.7 1.3 4.3 3.1c0.1 0.3 0.4 0.4 0.7 0.3l1.5-0.5c0.3-0.1 0.4-0.4 0.3-0.7C17.8 6.7 15.1 4.5 12 4.5z"/>
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#76B900">
+                <path d="M22.7 13.9v1.2c0 2.9-2.3 5.3-5.2 5.5-2.8.2-5.4-2-5.6-4.9v-1.8H9.3v1.8c.2 4.3 3.7 7.7 8 7.7 4.4 0 8-3.6 8-8v-1.5h-2.6z"/>
+                <path d="M17.5 10c-3.1 0-5.7 2.6-5.7 5.7v1.8H9.2v-1.8c0-4.6 3.7-8.3 8.3-8.3 4.6 0 8.3 3.7 8.3 8.3v1.8h-2.6v-1.8c0-3.1-2.6-5.7-5.7-5.7z"/>
+                <path d="M17.5 6c-5.3 0-9.7 4.3-9.7 9.7v1.8H5.2v-1.8c0-6.8 5.5-12.3 12.3-12.3 6.8 0 12.3 5.5 12.3 12.3v1.8h-2.6v-1.8c0-5.3-4.3-9.7-9.7-9.7z"/>
               </svg>
             </div>
             <div>
@@ -349,9 +357,9 @@
           <div class="skills-grid">
             <div class="skill-card"><div class="skill-icon"><i class="fab fa-python" style="color: #3776ab;"></i></div><span>Python</span></div>
             <div class="skill-card">
-              <div class="skill-icon" style="padding: 3px;">
-                <svg viewBox="0 0 24 24" fill="#00599C" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
-                  <path d="M22.9,11.1H19v-3.9h-1.8v3.9h-3.9v1.8h3.9v3.9H19v-3.9h3.9V11.1z M14.1,2.8L11.9,0.6L2.3,10.2L0.1,12.4l2.2,2.2l9.6,9.6l2.2-2.2l-9.6-9.6L14.1,2.8z"/>
+              <div class="skill-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="52" fill="#00599C">C++</text>
                 </svg>
               </div>
               <span>C / C++</span>
@@ -631,12 +639,12 @@
         <div class="contact-form-wrapper">
           <form class="contact-form" id="contact-form">
             <div class="form-group">
-              <label for="cf-name">Your Name</label>
-              <input type="text" id="cf-name" placeholder="John Doe" autocomplete="off"/>
-            </div>
-            <div class="form-group">
-              <label for="cf-email">Email Address</label>
-              <input type="email" id="cf-email" placeholder="john@example.com" autocomplete="off"/>
+                <label>Your Name</label>
+                <input type="text" placeholder="Levi" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="levi@example.com" required autocomplete="off"/>
             </div>
             <div class="form-group">
               <label for="cf-subject">Subject</label>
@@ -654,6 +662,12 @@
     </section>
 
   </main>
+
+  <!-- HIDDEN WATERMARK TO PREVENT UNAUTHORIZED COPYING -->
+  <div style="display:none !important; opacity:0; visibility:hidden; position:absolute; z-index:-9999;" id="copyright-watermark">
+    This portfolio website, including its source code, design, and content, belongs exclusively to Darshan Naidu. 
+    Unauthorized copying, cloning, or redistribution is strictly prohibited.
+  </div>
 
   <script src="script.js"></script>
 </body>
